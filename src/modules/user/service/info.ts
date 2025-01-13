@@ -7,7 +7,9 @@ import { v1 as uuid } from 'uuid';
 import { PluginService } from '../../plugin/service/info';
 import { UserInfoEntity } from '../entity/info';
 import { UserSmsService } from './sms';
+import { UserLoginService } from './login';
 import { UserWxService } from './wx';
+import { v4 as uuidv4 } from 'uuid';
 
 /**
  * 用户信息
@@ -22,6 +24,9 @@ export class UserInfoService extends BaseService {
 
   @Inject()
   userSmsService: UserSmsService;
+
+  @Inject()
+  UserLoginService: UserLoginService;
 
   @Inject()
   userWxService: UserWxService;
@@ -46,10 +51,40 @@ export class UserInfoService extends BaseService {
    */
   async person(id) {
     const info = await this.userInfoEntity.findOneBy({ id: Equal(id) });
+    console.log('info',info);
     delete info.password;
     return info;
   }
+/**
+ * 注册
+ * @param param
 
+ * */
+  async register(param) {
+    // 生成一个UUID
+        const uuid = uuidv4();
+        // 默认账号名密码为uuid
+      console.log('param',param);
+        param.nickName = uuid;
+        param.password = md5(uuid);
+        param.unionid = uuid;
+        
+    // const info = await this.userInfoEntity.findOneBy({ phone: Equal(phone) });
+    // if (info) throw new CoolCommException('手机号已存在');
+    // const sms = await this.userSmsService.checkCode(phone, code);
+    // if (!sms) throw new CoolCommException('验证码错误');
+    // await this.userInfoEntity.insert({
+    //   password: md5(param.username),
+    //   status: 1,  // 1正常 2注销  
+    // })
+    let user=await this.userInfoEntity.save({
+      ...param,
+       status: 1,  // 1正常 2注销  
+     })
+     return this.UserLoginService.token(user);
+   }
+    
+    
   /**
    * 注销
    * @param userId

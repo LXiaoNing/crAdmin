@@ -3,11 +3,11 @@ import { MidwayConfig } from '@midwayjs/core';
 import { CoolCacheStore } from '@cool-midway/core';
 
 // redis缓存
-// import { redisStore } from 'cache-manager-ioredis-yet';
+import { redisStore } from 'cache-manager-ioredis-yet';
 
 export default {
   // use for cookie sign key, should change to your own and keep security
-  keys: 'cool-admin-keys-xxxxxx',
+  keys: 'c3fddb20d0d511efa0fa41bbbd905e6b',
   koa: {
     port: 8001,
   },
@@ -27,31 +27,31 @@ export default {
     whitelist: null,
   },
   // 缓存 可切换成其他缓存如：redis http://www.midwayjs.org/docs/extensions/caching
-  cacheManager: {
-    clients: {
-      default: {
-        store: CoolCacheStore,
-        options: {
-          path: 'cache',
-          ttl: 0,
-        },
-      },
-    },
-  },
   // cacheManager: {
   //   clients: {
   //     default: {
-  //       store: redisStore,
+  //       store: CoolCacheStore,
   //       options: {
-  //         port: 6379,
-  //         host: '127.0.0.1',
-  //         password: '',
+  //         path: 'cache',
   //         ttl: 0,
-  //         db: 0,
   //       },
   //     },
   //   },
   // },
+  cacheManager: {
+    clients: {
+      default: {
+        store: redisStore,
+        options: {
+          port: 6379,
+          host: '8.155.39.171',
+          password: '123456',
+          ttl: 0,
+          db: 0,
+        },
+      },
+    },
+  },
   cool: {
     // 已经插件化，本地文件上传查看 plugin/config.ts，其他云存储查看对应插件的使用
     file: {},

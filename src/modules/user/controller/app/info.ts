@@ -50,6 +50,15 @@ export class AppUserInfoController extends BaseController {
     return this.ok();
   }
 
+  // 注册
+  @Post('/register', { summary: '注册' })
+  async register(
+    @Body('param') param, 
+  ) {
+    let token =await this.userInfoService.register({param});
+    return this.ok(token);
+  }
+
   @Post('/miniPhone', { summary: '绑定小程序手机号' })
   async miniPhone(@Body() body) {
     const { code, encryptedData, iv } = body;

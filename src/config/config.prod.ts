@@ -9,11 +9,11 @@ export default {
     dataSource: {
       default: {
         type: 'mysql',
-        host: '127.0.0.1',
+        host: '8.155.39.171',
         port: 3306,
-        username: 'root',
+        username: 'cool1',
         password: '123456',
-        database: 'cool',
+        database: 'cool1',
         // 自动建表 注意：线上部署的时候不要使用，有可能导致数据丢失
         synchronize: false,
         // 打印日志
@@ -29,6 +29,8 @@ export default {
   },
   cool: {
     // 是否自动导入数据库，生产环境不建议开，用本地的数据库手动初始化
-    initDB: false,
+    initDB: true,
+    // 实体与路径，跟生成代码、前端请求、swagger文档相关 注意：线上不建议开启，以免暴露敏感信息
+    eps: true,
   } as CoolConfig,
 } as MidwayConfig;

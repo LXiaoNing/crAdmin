@@ -9,11 +9,11 @@ export default {
     dataSource: {
       default: {
         type: 'mysql',
-        host: '127.0.0.1',
+        host: '8.155.39.171',
         port: 3306,
-        username: 'root',
+        username: 'cool1',
         password: '123456',
-        database: 'cool',
+        database: 'cool1',
         // 自动建表 注意：线上部署的时候不要使用，有可能导致数据丢失
         synchronize: true,
         // 打印日志

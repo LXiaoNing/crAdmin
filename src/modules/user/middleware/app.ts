@@ -27,6 +27,10 @@ export class UserMiddleware implements IMiddleware<Context, NextFunction> {
   @Init()
   async init() {
     this.ignoreUrls = this.coolUrlTagData.byKey(TagTypes.IGNORE_TOKEN, 'app');
+    this.ignoreUrls=[
+      ...this.ignoreUrls,
+      '/app/base/user/register'
+    ]
   }
 
   resolve() {
@@ -41,7 +45,7 @@ export class UserMiddleware implements IMiddleware<Context, NextFunction> {
             ctx.status = 401;
             ctx.body = {
               code: RESCODE.COMMFAIL,
-              message: '登录失效~',
+              message: '登录失效~1',
             };
             return;
           }
