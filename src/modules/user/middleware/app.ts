@@ -29,13 +29,14 @@ export class UserMiddleware implements IMiddleware<Context, NextFunction> {
     this.ignoreUrls = this.coolUrlTagData.byKey(TagTypes.IGNORE_TOKEN, 'app');
     this.ignoreUrls=[
       ...this.ignoreUrls,
-      '/app/base/user/register'
+      '/app/user/info/register'
     ]
   }
 
   resolve() {
     return async (ctx: Context, next: NextFunction) => {
       let { url } = ctx;
+      console.log('url', url);
       url = url.replace(this.prefix, '').split('?')[0];
       if (_.startsWith(url, '/app/')) {
         const token = ctx.get('Authorization');
