@@ -29,7 +29,10 @@ export class UserMiddleware implements IMiddleware<Context, NextFunction> {
     this.ignoreUrls = this.coolUrlTagData.byKey(TagTypes.IGNORE_TOKEN, 'app');
     this.ignoreUrls=[
       ...this.ignoreUrls,
-      '/app/user/info/register'
+      '/app/user/info/register',
+      '/app/goods/info/list',
+      '/app/hd/image_info/list'
+      
     ]
   }
 

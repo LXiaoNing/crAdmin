@@ -1,0 +1,15 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"cool1"},
+{"type":"table","name":"hd_image_info","database":"cool1","data":
+[
+{"id":"2","createTime":"2025-01-13 19:24:15.376000","updateTime":"2025-01-13 19:24:15.376000","image":"http:\/\/qq.1sym.com\/photo\/bs2xJ7DKpBvZww4N3deagWHN.gif","title":"伸缩发音烘干飞机杯","link":"http:\/\/qq.1sym.com\/photo\/bs2xJ7DKpBvZww4N3deagWHN.gif","sort":"0","color":"#0c1227"},
+{"id":"3","createTime":"2025-01-13 19:24:15.383000","updateTime":"2025-01-13 19:24:15.383000","image":"http:\/\/qt.uyjgigi.xyz\/photo\/yQSh35TA8jWnNYPcCKHuIU11.jpg","title":"情趣加盟","link":"0","sort":"0","color":"#752ec7"},
+{"id":"4","createTime":"2025-01-13 19:24:15.391000","updateTime":"2025-01-13 19:24:15.391000","image":"http:\/\/qt.uyjgigi.xyz\/photo\/sLBRtkdVerj2hSRddIwfkmrb.jpg","title":"情趣加盟","link":"0","sort":"0","color":"#bd94eb"},
+{"id":"5","createTime":"2025-01-13 19:24:16.987000","updateTime":"2025-01-13 19:24:16.987000","image":"http:\/\/qq.1sym.com\/photo\/gUqQFG4UVWKUGzbbfZI71Y1V.jpg","title":"G点大颗粒系列避孕套","link":"http:\/\/qq.1sym.com\/photo\/gUqQFG4UVWKUGzbbfZI71Y1V.jpg","sort":"0","color":"#9e3931"},
+{"id":"6","createTime":"2025-01-13 19:24:16.992000","updateTime":"2025-01-13 19:24:16.992000","image":"http:\/\/qq.1sym.com\/photo\/bs2xJ7DKpBvZww4N3deagWHN.gif","title":"伸缩发音烘干飞机杯","link":"http:\/\/qq.1sym.com\/photo\/bs2xJ7DKpBvZww4N3deagWHN.gif","sort":"0","color":"#0c1227"},
+{"id":"7","createTime":"2025-01-13 19:24:16.997000","updateTime":"2025-01-13 19:24:16.997000","image":"http:\/\/qt.uyjgigi.xyz\/photo\/yQSh35TA8jWnNYPcCKHuIU11.jpg","title":"情趣加盟","link":"0","sort":"0","color":"#752ec7"},
+{"id":"8","createTime":"2025-01-13 19:24:17.006000","updateTime":"2025-01-13 19:24:17.006000","image":"http:\/\/qt.uyjgigi.xyz\/photo\/sLBRtkdVerj2hSRddIwfkmrb.jpg","title":"情趣加盟","link":"0","sort":"0","color":"#bd94eb"}
+]
+}
+]
